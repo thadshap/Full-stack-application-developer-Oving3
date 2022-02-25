@@ -19,6 +19,9 @@ export default createStore({
     SET_USERNAME(state, username) {
       state.username = username
     },
+      SET_PROFILES(state, registers) {
+          state.registers = registers
+      },
   },
   actions: {
     createUser({commit}, registerInfo) {
@@ -44,7 +47,19 @@ export default createStore({
               console.log('User' + username + 'not found' + error)
             })
       }
-    }
+    },
+      fetchProfiles({ commit, state }) {
+          RegisterService.getProfiles()
+              .then(response => {
+                  commit('SET_PROFILES', response.data)
+                  console.log(
+                      'Successfully fetched feedback from server ' + state.registers.length
+                  )
+              })
+              .catch(error => {
+                  console.log('could not get profiles' + error)
+              })
+      },
   },
   modules: {}
 })

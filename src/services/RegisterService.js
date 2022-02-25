@@ -16,4 +16,7 @@ export default {
     getProfile(Findusername) {
         return apiClient.get('/comments', { username: Findusername })
     },
+    getProfiles() {
+        return apiClient.get('/comments')
+    },
 }

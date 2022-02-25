@@ -46,6 +46,16 @@
       "phone": "22222222",
       "id": "0a218511-538c-45c0-9900-272dc37b7aa4",
       "organizer": "Thadshajini Paramsothy"
+    },
+    {
+      "fullName": "Hanne",
+      "address": "vei",
+      "username": "hanne2",
+      "password": "passord",
+      "email": "epost",
+      "phone": "78278326",
+      "id": "428ce7e0-6605-4819-a959-63f349f8994c",
+      "organizer": "Thadshajini Paramsothy"
     }
   ]
 }

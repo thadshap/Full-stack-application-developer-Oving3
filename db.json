@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "fullName": "",
+      "address": "",
+      "username": "",
+      "password": "",
+      "email": "",
+      "phone": "",
+      "id": "f6e23c05-d88b-420b-b447-4635e9d3b043",
+      "organizer": "Thadshajini Paramsothy"
+    },
+    {
+      "fullName": "et navn",
+      "address": "adresse",
+      "username": "brukernavn",
+      "password": "passord",
+      "email": "epost",
+      "phone": "telefon",
+      "id": "1823f4ae-6c1f-4f73-9865-6cbe5472e829",
+      "organizer": "Thadshajini Paramsothy"
+    },
+    {
+      "fullName": "Thadshajini",
+      "address": "adresse",
+      "username": "Thadshap",
+      "password": "passord",
+      "email": "thadsha1710@live.no",
+      "phone": "99155453",
+      "id": "21680c9b-6568-4993-99d1-ff98f177df7e",
+      "organizer": "Thadshajini Paramsothy"
+    },
+    {
+      "fullName": "navn",
+      "address": "adresse",
+      "username": "brukernavn1",
+      "password": "passord2",
+      "email": "epost",
+      "phone": "22222222",
+      "id": "0a218511-538c-45c0-9900-272dc37b7aa4",
+      "organizer": "Thadshajini Paramsothy"
+    }
+  ]
+}

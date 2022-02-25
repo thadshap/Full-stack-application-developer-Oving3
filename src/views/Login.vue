@@ -10,24 +10,49 @@
     <div id="password">
       <label id="passwordLabel">Password: </label>
       <textarea v-model="password"></textarea>
+      <p>{{header}}</p>
+      <div v-if="showRegisterURL"><router-link to="/register">Register</router-link></div>
       <button v-on:click="handleClickSignin">Sign in</button>
     </div>
   </div>
 </template>
 
-
 <script>
+import Welcome from "./Welcome";
+
 export default {
+
   name: 'LoginComponent',
+
   methods: {
     handleClickSignin (){
-      alert("You entered, username: " + this.username);
+      this.showRegisterURL = false
+      this.$store.dispatch('fetchProfile', this.username)
+      const fetchedProfile = this.$store.state.register
+      if(
+          fetchedProfile.username === this.username &&
+          fetchedProfile.password === this.password
+      ){
+        this.$router.push({
+          name: 'Welcome',
+          component: Welcome,
+        })
+      }else if (fetchedProfile.username === this.username){
+           this.header = 'Wrong password'
+      }
+      else {
+        this.header = 'Login failed'
+        this.showRegisterURL = true
+      }
     }
   },
   data() {
     return {
       username: '',
       password: '',
+      name: '',
+      header: '',
+      showRegisterURL: false
     }
   }
 }

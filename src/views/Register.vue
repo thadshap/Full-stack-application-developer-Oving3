@@ -5,27 +5,27 @@
     </div>
     <div id="fullName">
       <label id="fullNameLabel">Full name:</label>
-      <textarea v-model="fullName"></textarea>
+      <textarea v-model="registerInfo.fullName"></textarea>
     </div>
     <div id="address">
       <label id="addressLabel">Address: </label>
-      <textarea v-model="address"></textarea>
+      <textarea v-model="registerInfo.address"></textarea>
     </div>
     <div id="username">
       <label id="usernameLabel">Username:</label>
-      <textarea v-model="username"></textarea>
+      <textarea v-model="registerInfo.username"></textarea>
     </div>
     <div id="password">
       <label id="passwordLabel">Password: </label>
-      <textarea v-model="password"></textarea>
+      <textarea v-model="registerInfo.password"></textarea>
     </div>
     <div id="email">
       <label id="emailLabel">Email: </label>
-      <textarea v-model="email"></textarea>
+      <textarea v-model="registerInfo.email"></textarea>
     </div>
     <div id="phone">
       <label id="phoneLabel">Phone: </label>
-      <textarea v-model="phone"></textarea>
+      <textarea v-model="registerInfo.phone"></textarea>
     </div>
     <div id="handleClickRegister">
       <button v-on:click="handleClickRegister">Register</button>
@@ -35,21 +35,34 @@
 
 
 <script>
+import { v4 as uuidv4 } from 'uuid'
 export default {
   name: 'LoginComponent',
-  methods: {
-    handleClickRegister (){
-      alert("You entered, username: " + this.username);
-    }
-  },
   data() {
     return {
-      fullName: '',
-      address:'',
-      username: '',
-      password: '',
-      email: '',
-      phone: ''
+      registerInfo: {
+        fullName: '',
+        address: '',
+        username: '',
+        password: '',
+        email: '',
+        phone: '',
+        id: '',
+        organizer: ''
+      }
+    }
+  },
+  methods: {
+    handleClickRegister() {
+      const registerInfo={
+        ...this.registerInfo,
+        id : uuidv4(),
+        organizer : this.$store.state.user
+      }
+      this.$store.dispatch('createUser',registerInfo)
+      this.$router.push({
+        name: 'Login',
+      })
     }
   }
 }

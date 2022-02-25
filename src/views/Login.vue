@@ -5,14 +5,14 @@
     </div>
     <div id="username">
       <label id="usernameLabel">Username:</label>
-      <textarea v-model="username"></textarea>
+      <input v-model="username" id="u">
     </div>
     <div id="password">
       <label id="passwordLabel">Password: </label>
-      <textarea v-model="password"></textarea>
-      <p>{{header}}</p>
+      <input v-model="password" id="p">
+      <p id="header">{{header}}</p>
       <div v-if="showRegisterURL"><router-link to="/register">Register</router-link></div>
-      <button v-on:click="handleClickSignin">Sign in</button>
+      <button v-on:click="handleClickSignin" id="logging">Sign in</button>
     </div>
   </div>
 </template>
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style scoped>
-textarea{
+input{
   margin: 10px;
 }
 #loginContainer {

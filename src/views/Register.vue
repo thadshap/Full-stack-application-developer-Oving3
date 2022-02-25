@@ -13,11 +13,11 @@
     </div>
     <div id="username">
       <label id="usernameLabel">Username:</label>
-      <textarea v-model="registerInfo.username"></textarea>
+      <input v-model="registerInfo.username" id="u">
     </div>
     <div id="password">
       <label id="passwordLabel">Password: </label>
-      <textarea v-model="registerInfo.password"></textarea>
+      <input v-model="registerInfo.password" id="p">
     </div>
     <div id="email">
       <label id="emailLabel">Email: </label>
@@ -28,7 +28,7 @@
       <textarea v-model="registerInfo.phone"></textarea>
     </div>
     <div id="handleClickRegister">
-      <button v-on:click="handleClickRegister">Register</button>
+      <button v-on:click="handleClickRegister" id="registerButton">Register</button>
     </div>
   </div>
 </template>
@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style scoped>
-textarea{
+textarea,input{
   margin: 10px;
 }
 #registerContainer {

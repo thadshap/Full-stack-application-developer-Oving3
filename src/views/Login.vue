@@ -32,8 +32,7 @@ export default {
       this.showRegisterURL = false
       this.$store.dispatch('fetchProfile', this.username)
       const fetchedProfile = this.$store.state.register
-      console.log(fetchedProfile.username)
-      console.log(this.username)  
+
       if(
           fetchedProfile.username === this.username &&
           fetchedProfile.password === this.password

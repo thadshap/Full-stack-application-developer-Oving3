@@ -4,6 +4,20 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "id": "ebacb91a-1d26-4249-932e-e73fcdd77f7e",
+      "name": "hanne",
+      "epost": "hanne1202@gmail.com",
+      "message": "flott app",
+      "organizer": "Thadshajini Paramsothy"
+    },
+    {
+      "id": "bd2945cf-b0d6-4adc-97f3-1b391e17d11a",
+      "name": "hanne",
+      "epost": "hanne1202@gmail.com",
+      "message": "flott app",
+      "organizer": "Thadshajini Paramsothy"
     }
   ],
   "comments": [
@@ -65,6 +79,16 @@
       "email": "epost",
       "phone": "7248738",
       "id": "a61a3551-1a74-4767-ac0a-821804f5c07b",
+      "organizer": "Thadshajini Paramsothy"
+    },
+    {
+      "fullName": "Tharunya",
+      "address": "gata",
+      "username": "Tharun234",
+      "password": "tullingfragata",
+      "email": "tulling@gata.no",
+      "phone": "00000000",
+      "id": "0dce984d-aa61-43d1-b5c3-09e5c1e3e0b9",
       "organizer": "Thadshajini Paramsothy"
     }
   ]
